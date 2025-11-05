@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard </title>
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .dashboard-header {
+            background: linear-gradient(135deg, #ff6b6b 0%, #f06292 100%);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #4a90e2;
+            color: white;
+        }
+        .accordion-button:hover {
+            background-color: #e3f2fd;
+        }
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.25);
+        }
+        .stat-card {
+            border-left: 4px solid #4a90e2;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="dashboard-header">
+        <div class="container">
+            <h1 class="mb-0">Dashboard</h1>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="accordion" id="dashboardAccordion">
+  
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        📊 Statistics Overview
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" 
+                     aria-labelledby="headingOne" data-bs-parent="#dashboardAccordion">
+                    <div class="accordion-body">
+                        <div class="row g-3">
+                            <div class="col-md-3">
+                                <div class="card stat-card">
+                                    <div class="card-body">
+                                        <h6 class="text-muted">Total Users</h6>
+                                        <h2 class="mb-0">1,234</h2>
+                                        <span class="badge bg-success">+12%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card stat-card">
+                                    <div class="card-body">
+                                        <h6 class="text-muted">Revenue</h6>
+                                        <h2 class="mb-0">₹45,678</h2>
+                                        <span class="badge bg-info">+8%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card stat-card">
+                                    <div class="card-body">
+                                        <h6 class="text-muted">Orders</h6>
+                                        <h2 class="mb-0">567</h2>
+                                        <span class="badge bg-warning">-3%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card stat-card">
+                                    <div class="card-body">
+                                        <h6 class="text-muted">Products</h6>
+                                        <h2 class="mb-0">89</h2>
+                                        <span class="badge bg-primary">New</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        📋 Recent Transactions
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" 
+                     aria-labelledby="headingTwo" data-bs-parent="#dashboardAccordion">
+                    <div class="accordion-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Customer</th>
+                                        <th>Product</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>John Doe</td>
+                                        <td>Laptop</td>
+                                        <td>₹45,000</td>
+                                        <td><span class="badge bg-success">Completed</span></td>
+                                        <td><button class="btn btn-sm btn-primary">View</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Jane Smith</td>
+                                        <td>Phone</td>
+                                        <td>₹25,000</td>
+                                        <td><span class="badge bg-warning">Pending</span></td>
+                                        <td><button class="btn btn-sm btn-primary">View</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Mike Johnson</td>
+                                        <td>Tablet</td>
+                                        <td>₹15,000</td>
+                                        <td><span class="badge bg-success">Completed</span></td>
+                                        <td><button class="btn btn-sm btn-primary">View</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        ✏️ Add New Product
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" 
+                     aria-labelledby="headingThree" data-bs-parent="#dashboardAccordion">
+                    <div class="accordion-body">
+                        <div id="productAlert" style="display:none;"></div>
+                        <form id="addProductForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="productName">Product Name</label>
+                                    <input type="text" class="form-control" id="productName" name="productName" placeholder="Enter product name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="category">Category</label>
+                                    <select class="form-select" id="category" name="category" required>
+                                        <option value="" selected>Choose category</option>
+                                        <option value="Electronics">Electronics</option>
+                                        <option value="Clothing">Clothing</option>
+                                        <option value="Books">Books</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="price">Price (₹)</label>
+                                    <input type="number" class="form-control" id="price" name="price" placeholder="0.00" min="0" step="0.01" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="stock">Stock Quantity</label>
+                                    <input type="number" class="form-control" id="stock" name="stock" placeholder="0" min="0" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="description">Description</label>
+                                    <textarea class="form-control" id="description" name="description" rows="3" placeholder="Product description"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="featured" name="featured">
+                                        <label class="form-check-label" for="featured">
+                                            Mark as Featured Product
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Add Product</button>
+                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        📈 Progress & Notifications
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" 
+                     aria-labelledby="headingFour" data-bs-parent="#dashboardAccordion">
+                    <div class="accordion-body">
+                        <!-- Alerts -->
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Success!</strong> Your profile has been updated successfully.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong>Warning!</strong> Your storage is 80% full.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+
+                        <!-- Progress Bars -->
+                        <h6 class="mt-4">Project Progress</h6>
+                        <div class="mb-3">
+                            <label>Website Development</label>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" style="width: 75%">75%</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label>Mobile App</label>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" style="width: 45%">45%</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label>Database Migration</label>
+                            <div class="progress">
+                                <div class="progress-bar bg-warning" style="width: 60%">60%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        📝 Tasks & Actions
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" 
+                     aria-labelledby="headingFive" data-bs-parent="#dashboardAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>Pending Tasks</h6>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">Update Documentation</h6>
+                                            <small class="text-danger">High Priority</small>
+                                        </div>
+                                        <p class="mb-1">Complete API documentation by Friday</p>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">Client Meeting</h6>
+                                            <small class="text-warning">Medium</small>
+                                        </div>
+                                        <p class="mb-1">Discuss project requirements</p>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">Code Review</h6>
+                                            <small class="text-success">Low</small>
+                                        </div>
+                                        <p class="mb-1">Review pull requests</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Quick Actions</h6>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary">Generate Report</button>
+                                    <button class="btn btn-success">Export Data</button>
+                                    <button class="btn btn-warning">Send Notification</button>
+                                    <button class="btn btn-danger">Clear Cache</button>
+                                    <button class="btn btn-info">Backup Database</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.getElementById('addProductForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('productName').value;
+        const category = document.getElementById('category').value;
+        const price = document.getElementById('price').value;
+        const stock = document.getElementById('stock').value;
+        const description = document.getElementById('description').value;
+        const featured = document.getElementById('featured').checked ? 'Yes' : 'No';
+        const alertDiv = document.getElementById('productAlert');
+        alertDiv.style.display = 'block';
+        alertDiv.innerHTML = `<div class='alert alert-success alert-dismissible fade show' role='alert'>
+            <strong>Product Added!</strong><br>
+            <b>Name:</b> ${name}<br>
+            <b>Category:</b> ${category}<br>
+            <b>Price:</b> ₹${price}<br>
+            <b>Stock:</b> ${stock}<br>
+            <b>Featured:</b> ${featured}<br>
+            <b>Description:</b> ${description}
+            <button type='button' class='btn-close' data-bs-dismiss='alert'></button>
+        </div>`;
+        document.getElementById('addProductForm').reset();
+    });
+    </script>
+</body>
+</html>
